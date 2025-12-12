@@ -2,29 +2,75 @@ import init, { Universe, Cell } from "/wasm/wasm_game_of_life.js"
 
 const { memory } = await init("/wasm/wasm_game_of_life_bg.wasm");
 
-console.log("OK")
-
 const CELL_SIZE = 5; // px
 const GRID_COLOR = "#FFA86A";
 const DEAD_COLOR = "#222129";
 const ALIVE_COLOR = "#FFA86A";
 
-const width = 128;
-const height = 16;
-const universe = Universe.new(width, height);
-
 const canvas = document.getElementById("game-of-life-canvas");
 const ctx = canvas.getContext('2d');
+
+const getWidth = () => Math.floor(canvas.parentElement.offsetWidth / (CELL_SIZE + 1))
+
+let width = getWidth()
+const height = 16;
+let universe = Universe.new(width, height);
+
 
 canvas.height = (CELL_SIZE + 1) * height + 1;
 canvas.width = (CELL_SIZE + 1) * width + 1
 
+/*
+const playPauseButton = document.getElementById("play-pause");
+const resetButton = document.getElementById("reset");
+const nukeButton = document.getElementById("nuke");
+*/
+
+let animationId = null
+
+const play = () => {
+    // playPauseButton.textContent = "⏸";
+    renderLoop();
+};
+
+const pause = () => {
+    // playPauseButton.textContent = "▶";
+    cancelAnimationFrame(animationId);
+    animationId = null;
+};
+
+/*
+playPauseButton.addEventListener("click", _ => {
+    if (isPaused()) {
+        play();
+    } else {
+        pause();
+    }
+});
+
+resetButton.addEventListener("click", _ => {
+    universe.reset()
+    if (isPaused()) {
+        drawCells();
+    }
+})
+
+nukeButton.addEventListener("click", _ => {
+    universe.nuke();
+    drawCells();
+    pause();
+})
+*/
+
+const isPaused = () => {
+    return animationId === null;
+};
+
 const renderLoop = () => {
     universe.tick();
-    // drawGrid();
     drawCells();
 
-    requestAnimationFrame(renderLoop);
+    animationId = requestAnimationFrame(renderLoop);
 };
 
 const getIndex = (row, column) => {
@@ -76,25 +122,6 @@ const drawCells = () => {
     ctx.stroke();
 };
 
-const drawGrid = () => {
-    ctx.beginPath();
-    ctx.strokeStyle = GRID_COLOR;
-
-    // Vertical lines.
-    for (let i = 0; i <= width; i++) {
-        ctx.moveTo(i * (CELL_SIZE + 1) + 1, 0);
-        ctx.lineTo(i * (CELL_SIZE + 1) + 1, (CELL_SIZE + 1) * height + 1);
-    }
-
-    // Horizontal lines.
-    for (let j = 0; j <= height; j++) {
-        ctx.moveTo(0, j * (CELL_SIZE + 1) + 1);
-        ctx.lineTo((CELL_SIZE + 1) * width + 1, j * (CELL_SIZE + 1) + 1);
-    }
-
-    ctx.stroke();
-};
-
 const drawBorders = () => {
     ctx.beginPath();
     ctx.strokeStyle = GRID_COLOR;
@@ -129,15 +156,26 @@ canvas.addEventListener("click", event => {
     }
 
 
-    // drawGrid();
     drawCells();
 });
 
-const play = () => {
-    renderLoop();
-};
+window.addEventListener("resize", () => {
+    const newWidth = getWidth()
+    if (width === newWidth) {
+        return
+    }
 
-// drawGrid();
+    width = newWidth
+    canvas.width = (CELL_SIZE + 1) * width + 1;
+    universe.set_width(width)
+    universe.reset()
+    drawBorders()
+    drawCells();
+    pause()
+
+    animationId = requestAnimationFrame(renderLoop);
+})
+
 drawBorders();
 drawCells();
 play();

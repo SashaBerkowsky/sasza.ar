@@ -7,7 +7,7 @@ if you want to know more about me and my background i strongly encourage you to 
 
 the main focus of this site (aside of advertising me as a professional of course) is for me to create my own vision and criteria as a developer by sharing my projects and putting my experiences into words.
 
-i wanted to make each visit unique and i am really into computer generation and restrictive randomness so i made a [Conway's Game of Life](google.com) using [rust + wasm](https://rustwasm.github.io/book/game-of-life/implementing.html#infinite-universe) and added it as a banner so each time you load a page here it will be absolutly unique! :)
+i wanted to make each visit different and i am really into computer generation and restrictive randomness so i made a [Conway's Game of Life](google.com) using [rust + wasm](https://rustwasm.github.io/book/game-of-life/implementing.html#infinite-universe) and added it as a banner so each time you load a page here it will be absolutly unique! :)
 
 at the end of this page there is a large playground for you to interact with it, i also added some commands to make it more interesting:
 

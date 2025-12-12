@@ -9,12 +9,15 @@ const GRID_COLOR = "#FFA86A";
 const DEAD_COLOR = "#222129";
 const ALIVE_COLOR = "#FFA86A";
 
-const width = 128;
-const height = 128;
-const universe = Universe.new(width, height);
-
 const canvas = document.getElementById("game-of-life-canvas");
 const ctx = canvas.getContext('2d');
+
+const getWidth = () => Math.floor(canvas.parentElement.offsetWidth / (CELL_SIZE + 1))
+
+let width = getWidth()
+const height = 128;
+let universe = Universe.new(width, height);
+
 
 canvas.height = (CELL_SIZE + 1) * height + 1;
 canvas.width = (CELL_SIZE + 1) * width + 1
@@ -153,6 +156,23 @@ canvas.addEventListener("click", event => {
 
     drawCells();
 });
+
+window.addEventListener("resize", () => {
+    const newWidth = getWidth()
+    if (width === newWidth) {
+        return
+    }
+
+    width = newWidth
+    canvas.width = (CELL_SIZE + 1) * width + 1;
+    universe.set_width(width)
+    universe.reset()
+    drawBorders()
+    drawCells();
+    pause()
+
+    animationId = requestAnimationFrame(renderLoop);
+})
 
 drawBorders();
 drawCells();

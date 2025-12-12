@@ -15,6 +15,6 @@ at the end of this page there is a large playground for you to interact with it,
 - `ctrl + left click`: spawn glider
 - `shift + left click`: spawn pulsar
 
-also if you want to use the action bar inside the banner you can toggle it by placing your cusor on it and pressing `alt + left click`
+also if you want to use the action bar inside the banner you can toggle it by placing your cusor on it and pressing `right click`
 
 have fun and i hope you enjoy my little corner on the internet!

@@ -10,36 +10,34 @@ const ALIVE_COLOR = "#FFA86A";
 const canvas = document.getElementById("game-of-life-canvas");
 const ctx = canvas.getContext('2d');
 
+const actionBar = document.getElementById("action-bar-container")
+
 const getWidth = () => Math.floor(canvas.parentElement.offsetWidth / (CELL_SIZE + 1))
 
 let width = getWidth()
 const height = 16;
 let universe = Universe.new(width, height);
 
-
 canvas.height = (CELL_SIZE + 1) * height + 1;
 canvas.width = (CELL_SIZE + 1) * width + 1
 
-/*
 const playPauseButton = document.getElementById("play-pause");
 const resetButton = document.getElementById("reset");
 const nukeButton = document.getElementById("nuke");
-*/
 
 let animationId = null
 
 const play = () => {
-    // playPauseButton.textContent = "⏸";
+    playPauseButton.textContent = "⏸";
     renderLoop();
 };
 
 const pause = () => {
-    // playPauseButton.textContent = "▶";
+    playPauseButton.textContent = "▶";
     cancelAnimationFrame(animationId);
     animationId = null;
 };
 
-/*
 playPauseButton.addEventListener("click", _ => {
     if (isPaused()) {
         play();
@@ -60,7 +58,6 @@ nukeButton.addEventListener("click", _ => {
     drawCells();
     pause();
 })
-*/
 
 const isPaused = () => {
     return animationId === null;
@@ -158,6 +155,18 @@ canvas.addEventListener("click", event => {
 
     drawCells();
 });
+
+canvas.addEventListener("contextmenu", event => {
+    event.preventDefault()
+    actionBar.style.visibility =
+        actionBar.style.visibility === "hidden" ? "visible" : "hidden";
+})
+
+actionBar.addEventListener("contextmenu", event => {
+    event.preventDefault()
+    actionBar.style.visibility =
+        actionBar.style.visibility === "hidden" ? "visible" : "hidden";
+})
 
 window.addEventListener("resize", () => {
     const newWidth = getWidth()

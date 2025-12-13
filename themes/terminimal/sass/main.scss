@@ -254,6 +254,7 @@ hr {
   align-items: center
 
 }
+
 .gol-actions {
     display: flex;
     gap: 0.5rem;
@@ -263,4 +264,40 @@ hr {
       padding: 2px 8px;
       border-radius: 4px;
     }
+}
+
+.banner {
+  position: relative;
+  line-height: 0;
+}
+
+#action-bar-container {
+  visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#action-bar-container .action-bar-bg {
+  position: absolute;
+  inset: 0;
+  background-color: #00000090;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+.action-bar {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 11;
+
+  button {
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
 }

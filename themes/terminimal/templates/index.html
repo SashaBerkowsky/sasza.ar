@@ -61,7 +61,17 @@
         {% block header_menu %}
         {{ menu_macros::menu(config=config, current_path=current_path) }}
         {% endblock header_menu %}
-        <canvas id="game-of-life-canvas"></canvas>
+        <div class="banner">
+            <canvas id="game-of-life-canvas"></canvas>
+            <div id="action-bar-container">
+                <div class="action-bar-bg"></div>
+                <div class="action-bar">
+                    <button id="play-pause">⏸</button>
+                    <button id="reset">↻</button>
+                    <button id="nuke">⏹</button>
+                </div>
+            </div>
+        </div>
     </header>
     {% endblock header %}
 

@@ -37,7 +37,7 @@ menu_items = [
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "tools", url = "$BASE_URL/tools"},
     {name = "github", url = "https://github.com/sashaberkowsky", newtab = true},
-    {name = "linkedin", url = "https://github.com/sasha-berkowsky", newtab = true},
+    {name = "linkedin", url = "https://linkedin.com/in/sasha-berkowsky", newtab = true},
     {name = "resume", url = "$BASE_URL/docs/resume.pdf", newtab = true},
 ]
 enable_post_view_navigation = true

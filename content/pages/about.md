@@ -2,4 +2,15 @@
 title="about me"
 path="about"
 +++
-Hi! My name is Sasha, I'm a proudly argentinan certified systems analyst and computer science student, dedicated full stack developer with over 4 years of experience in software development. Proactive and detail-oriented with a proven ability to work effectively in small, diverse teams. Currently seeking to advance my technical skills and contribute to a collaborative, cross-functional environment within a larger organization.
+hi! my name is sasha, i'm a proudly argentinan certified systems analyst and computer science student, right now i'm working as a full stack developer with over 4 years of experience in software development.
+
+if you see me working on projects (whether backend or frontend), chances are i'm using _javascript_. that said, languages are just a tool for me so i'm constantly trying new ones for fun and for my own personal projects.
+
+lately i've been really into _C_, _rust_ and _go_. it's been especially fun for me getting to learn and compare an older (but still totally relevant) system's programming language like _C_ and see (get it?) the way that it diverges from more modern options such as _rust_ and _go_, particulary in terms of sintax and memory management.
+
+even though the job market and my professional background have led me down a fullstack-oriented path, my current intention is to shift toward more technical roles, working with fewer abstraction layers and more low level design. i also have been getting into crypto on the side which has been surprisingly refreshing and fun.
+
+# hobbies
+
+TODO
+

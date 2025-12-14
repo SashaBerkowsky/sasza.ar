@@ -5,9 +5,9 @@ hello! my name is sasha, welcome to my <u>personal website</u>.
 
 if you want to know more about me and my background i strongly encourage you to visit the [about me](/about) section.
 
-the main focus of this site (aside of advertising me as a professional of course) is for me to create my own vision and criteria as a developer by sharing my projects and putting my experiences into words.
+the main focus of this site, aside of advertising me as a professional of course, is for me to create my own vision and criteria as a developer by sharing my projects and putting my experiences into words.
 
-i wanted to make each visit different, and since i am really into computer generation and constrained randomness i built a [Conway's Game of Life](google.com) using [rust + wasm](https://rustwasm.github.io/book/game-of-life/implementing.html#infinite-universe) and added it as a banner. that way every time you load a page here it's absolutly unique! :).
+i wanted to make each visit different, and since i am really into computer generation as well as constrained randomness (and overengineering) i built a [Conway's Game of Life](google.com) implementation using [rust + wasm](https://rustwasm.github.io/book/game-of-life/implementing.html#infinite-universe) and added it as a banner. that way every time you load a page here it's absolutly unique! :).
 
 at the end of this page there is a large playground for you to interact with it, i also added some commands to make it more interesting:
 

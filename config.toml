@@ -1,5 +1,5 @@
 #The URL the site will be built for
-base_url = "https://saszaar.vercel.app/"
+base_url = "https://sasza.ar/"
 title = "sasza.ar"
 description = "sasha's personal website"
 

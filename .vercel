@@ -1,0 +1,13 @@
+{
+  "framework": null,
+  "buildCommand": "zola build",
+  "outputDirectory": "public",
+  "headers": [
+    {
+      "source": "/wasm/(.*)\\.wasm",
+      "headers": [
+        { "key": "Content-Type", "value": "application/wasm" }
+      ]
+    }
+  ]
+}

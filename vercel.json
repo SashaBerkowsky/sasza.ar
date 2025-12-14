@@ -8,6 +8,12 @@
       "headers": [
         { "key": "Content-Type", "value": "application/wasm" }
       ]
+    },
+    {
+      "source": "/wasm/(.*)\\.js",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
     }
   ]
 }

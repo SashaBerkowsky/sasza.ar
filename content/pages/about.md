@@ -10,7 +10,6 @@ lately i’ve been really into _C_, _rust_ and _go_. it’s been especially fun 
 
 even though the job market and my professional background have led me down a fullstack-oriented path, my current intention is to shift toward more technical roles, working with fewer abstraction layers and more low level design. i also have been getting into crypto on the side which has been surprisingly refreshing and fun.
 
-# hobbies
+# future
 
-TODO
-
+my main aspiration as a professional and what i believe that a programmer should be centers around solving really complex problems in a creative manner with a positive impact in my country or in my community either in the field of science or in projects that i really believe in and i’m passionate about.

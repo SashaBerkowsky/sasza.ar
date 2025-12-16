@@ -22,10 +22,14 @@ this motivation ultimately led me to enroll at the [University of Buenos Aires](
 
 # work
 
-during my four years as a professional software developer i had the pleasure of working in a lot of very meaningful projects within amazing organizations that shaped me into the professional that i’m today and for that i'm extremely grateful, these are
+during my four years as a professional software developer, i had the pleasure of working on a lot of very meaningful projects within amazing organizations that shaped me into the professional that i’m today. for that, i’m extremely grateful. these are:
 
-- EspaciosYA:
-- Overtime:
-- Quantit:
-
-# future
+---
+- <u>EspaciosYA</u>: designed, implemented and managed a progressive web app with thousands of users, serving as a platform that transforms the real estate sector into a collaborative ecosystem without intermediaries, this was a startup that’s no longer running, so the website has been archived.
+    - _with reactjs, nodejs, figma and firebase_
+---
+- [Overtime](http://overtimebasquet.com): designed and implemented a stats website for an amateur basketball tournament featuring more than forty teams and over six hundred matches.
+    - _with nextjs, figma and tailwind_
+---
+- [Quantit](http://bequantit.com): developed full-stack internal tools to enhance data science productivity and collaborated on the architectural review for a migration to a SaaS model
+    - _with nextjs, django and aws_

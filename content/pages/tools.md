@@ -36,6 +36,6 @@ all of this reasoning culminates in my dev environment being sustained by:
 
 all of this supported by small scripts of my own on the side.
 
-*tldr*; i hate using the mouse, love simple open source software and making it my own.
+<b>tldr;</b> i hate using the mouse, love simple open source software and making it my own.
 
 on a side note, as i really value the responsiveness that text-based user interfaces give me, i’ll admit that anytime i’m doing something risky or scary on a computer it’s always reassuring to be able to do it in a GUI.
